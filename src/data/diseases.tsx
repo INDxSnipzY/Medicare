@@ -16,6 +16,12 @@ export const diseases: Disease[] = [
     overview:
       "Type 2 diabetes is a chronic condition that affects how the body processes blood sugar (glucose). It develops when the body becomes resistant to insulin or does not produce enough insulin.",
 
+    updatedAt: "20 July 2026",
+
+    readTime: "10 min read",
+
+    medicallyReviewed: true,
+
     symptoms: [
       "Frequent urination",
       "Increased thirst",

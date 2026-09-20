@@ -9,7 +9,10 @@ export const diseases: Disease[] = [
     image: "/diseases/diabetes.webp",
     overview:
       "Diabetes is a chronic condition that affects how your body turns food into energy and regulates blood sugar.",
-
+    updatedAt: "2026-07-20",
+    readTime: "10 min read",
+    medicallyReviewed: true,
+    
     symptoms: [
       "Frequent urination",
       "Increased thirst",
