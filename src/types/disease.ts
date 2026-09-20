@@ -3,9 +3,6 @@ export interface Disease {
   slug: string;
   name: string;
   image: string;
-  updatedAt: string;
-  readTime: string;
-  medicallyReviewed: boolean;
   category: string;
   overview: string;
   symptoms: string[];
