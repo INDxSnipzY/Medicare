@@ -21,7 +21,7 @@ export default function FloatingDashboard() {
         <DashboardCard
           icon={<Brain className="h-6 w-6" />}
           title="AI Assistant"
-          value="Ready"
+          value="Currently offline"
           subtitle="Ask health questions"
           delay={0.2}
         />
