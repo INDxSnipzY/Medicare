@@ -13,6 +13,8 @@ import DiseaseComplications from "@/components/disease/DiseaseComplications";
 import DiseaseEmergency from "@/components/disease/DiseaseEmergency";
 import DiseaseFAQ from "@/components/disease/DiseaseFAQ";
 import RelatedDiseases from "@/components/disease/RelatedDiseases";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 import { diseases } from "@/data/diseases";
 
@@ -72,6 +74,7 @@ export default async function DiseasePage({
       <RelatedDiseases
         diseases={relatedDiseases}
       />
+      <Footer />
     </main>
   );
 }
