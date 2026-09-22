@@ -29,37 +29,6 @@ MediCare is a healthcare web application focused on providing information about 
 * Node.js
 * npm
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd medicare
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open http://localhost:3000 in your browser.
-
-## 📸 Screenshots
-
-Add screenshots of your MediCare website here to showcase its interface and features.
 
 ## 🔒 License
 
@@ -73,8 +42,8 @@ See the [LICENSE](./LICENSE) file for details.
 
 **Ajay Sawle**
 
-* GitHub: [Your GitHub Profile](https://github.com/YOUR_GITHUB_USERNAME)
-* Portfolio: [Visit My Portfolio](https://portfolio-tau-rose-56.vercel.app/)
+* GitHub: [Ajay-Sawle](https://github.com/INDxSnipzY)
+* Portfolio: [Portfolio](https://portfolio-tau-rose-56.vercel.app/)
 
 ---
 
