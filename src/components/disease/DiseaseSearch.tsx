@@ -1,61 +1,79 @@
+
 "use client";
 
 import { Search, X } from "lucide-react";
-import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-export default function DiseaseSearch() {
-  const [search, setSearch] = useState("");
+interface DiseaseSearchProps {
+  search: string;
+  onSearchChange: (value: string) => void;
+}
 
+const popularSearches = [
+  "Diabetes",
+  "Hypertension",
+  "Asthma",
+  "Migraine",
+  "COVID-19",
+  "Dengue",
+];
+
+export default function DiseaseSearch({
+  search,
+  onSearchChange,
+}: DiseaseSearchProps) {
   return (
     <div className="rounded-3xl border bg-background p-4 shadow-sm">
-      <div className="flex flex-col gap-3 md:flex-row">
+      <form
+        className="flex flex-col gap-3 sm:flex-row"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <div className="relative flex-1">
-          <Search className="absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+          <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
 
           <Input
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(event) =>
+              onSearchChange(event.target.value)
+            }
             placeholder="Search diseases, symptoms or treatments..."
+            aria-label="Search diseases"
             className="h-12 rounded-2xl pl-12 pr-12 text-base"
           />
 
           {search && (
-            <button
+            <Button
               type="button"
-              onClick={() => setSearch("")}
-              className="absolute top-1/2 right-4 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+              variant="ghost"
+              size="icon"
+              onClick={() => onSearchChange("")}
+              className="absolute right-2 top-1/2 -translate-y-1/2"
+              aria-label="Clear search"
             >
-              <X className="h-5 w-5" />
-            </button>
+              <X className="h-4 w-4" />
+            </Button>
           )}
         </div>
 
-        <Button className="h-12 px-8">
+        <Button type="submit" className="h-12 px-8">
           Search
         </Button>
-      </div>
+      </form>
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="mt-5 flex flex-wrap items-center gap-2">
         <span className="text-sm font-medium text-muted-foreground">
           Popular:
         </span>
 
-        {[
-          "Diabetes",
-          "Hypertension",
-          "Asthma",
-          "Migraine",
-          "COVID-19",
-          "Dengue",
-        ].map((item) => (
+        {popularSearches.map((item) => (
           <Button
             key={item}
+            type="button"
             variant="outline"
             size="sm"
-            onClick={() => setSearch(item)}
+            onClick={() => onSearchChange(item)}
           >
             {item}
           </Button>
